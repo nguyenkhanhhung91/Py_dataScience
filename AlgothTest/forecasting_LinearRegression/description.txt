@@ -1,0 +1,1 @@
+Test linear regression with free data from tradingeconomics.com, kaggle.com
