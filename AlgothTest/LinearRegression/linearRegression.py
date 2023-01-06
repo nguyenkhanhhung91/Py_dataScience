@@ -12,7 +12,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 import matplotlib.pyplot as plt
 
 
-#Let find which data file we can use for forecasting, it should not include a lot of variance and has a lot of variables.
+#Let find which data file we can use for forecasting, it should not include a lot of variance and has a lot of variables. (least square)
 
 df0 = pd.read_json('VietnamExportToChina.json')
 df0 = df0.drop('symbol', axis = 1)
@@ -79,7 +79,7 @@ axis[0, 0].scatter(X, Y,label=' real value', marker='o', color='r')
 axis[0, 0].legend()
 axis[0, 0].ticklabel_format(axis="y", style='plain')
 
-#Formatiing values in billions
+#Formating values in billions
 def formatter(x, pos):
     return str(round(x / 1e9, 1))
 
