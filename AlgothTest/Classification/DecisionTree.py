@@ -112,6 +112,10 @@ graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_png('tree.png')
 Image(graph.create_png())
 
+# The math behind each decision is based on Gini Impurity or entropy/information gain. 
+# We can use information gain to determine how good the splitting of nodes in a decision tree.
+# The more the entropy removed, the greater the information gain. The higher the information gain, the better the split.
+# More at https://www.section.io/engineering-education/entropy-information-gain-machine-learning/
 # Random tree can capture non-linear relationship but prone to noise(overfitting)
 # Random forest is used to overcome overfitting data. Split the dataset, using many decision tree to produce outputs. 
 # Which ouput has a majority from all decision trees will be picked.
