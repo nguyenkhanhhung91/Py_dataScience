@@ -9,7 +9,9 @@ from six import StringIO
 from IPython.display import Image  
 import pydotplus
 
+import streamlit as st
 
+st.title ("This is the DecisionTree App demo")
 
 df = pd.read_json('Film.JSON', orient='records')
 
@@ -98,11 +100,12 @@ df2 = pd.DataFrame(new_movies)
 df2['Genre Number Category'] = df2["Genre"].map(genre_category)
 df2['Actors Number Category'] = df2["Actors"].map(Has_actor)
 
-print(dtree.predict(df2[features]))
+
+st.write("Here is the prediction", dtree.predict(df2[features]))
 
 y_test = [1,0,1]
 
-print("Accuracy:",metrics.accuracy_score(y_test, dtree.predict(df2[features])))
+st.write("Accuracy:",metrics.accuracy_score(y_test, dtree.predict(df2[features])))
 
 dot_data = StringIO()
 export_graphviz(dtree, out_file=dot_data,  
