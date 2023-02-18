@@ -116,3 +116,4 @@ Image(graph.create_png())
 # Random forest is used to overcome overfitting data. Split the dataset, using many decision tree to produce outputs. 
 # Which ouput has a majority from all decision trees will be picked.
 # More on Gini and decision tree: https://www.youtube.com/watch?v=_L39rN6gz7Y
+# More on Entropy and the math behind decision tree https://www.section.io/engineering-education/entropy-information-gain-machine-learning/
